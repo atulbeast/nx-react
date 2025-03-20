@@ -1,0 +1,8 @@
+{
+  "name": "@react-nx/reactNX",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "name": "reactNX"
+  }
+}
