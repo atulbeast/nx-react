@@ -2,14 +2,13 @@ import { test, expect } from '@playwright/test';
 test.beforeEach(async ({ page }) => {
   await page.goto("http://localhost:4200/page-2"); // Update with your local URL
 });
-// test('has title', async ({ page }) => {
-//   await page.goto('/');
-
-//   // Expect h1 to contain a substring.
-//   const nav=await page.locator('[role="navigation"] [role="navigation"] li:nth-child(2) > a')
-//   expect(await nav.innerText()).toContain('Home');
-//   expect(await nav.innerText())
-// });
+test('task page exist', async ({ page }) => {
+  await page.goto('http://localhost:4200/');
+  const nav=await page.locator('[role="navigation"] a').nth(1);
+  expect(nav).toHaveText('Page 2')
+  await nav.click();
+  expect(await page.locator("input[placeholder='New task...']")).toBeVisible();
+});
 
 
 test("should add a new task", async ({ page }) => {
