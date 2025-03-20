@@ -60,6 +60,21 @@ You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx 
 
 [Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
+## Automation Testing using Playwright
+
+Run the below command in terminal
+```sh
+npx playwright test
+```
+For ui experience
+```sh
+npx playwright test --ui
+```
+For loading all the browsers mentioned in project in the ui
+```sh
+npx nx e2e reactNX-e2e --ui
+```
+
 ## Install Nx Console
 
 Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
